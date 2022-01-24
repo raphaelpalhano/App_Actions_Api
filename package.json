@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cytest": "cypress open"
+    "cytestUI": "cypress open",
+    "cytestAPI": "cypress run"  
   },
   "keywords": [],
   "author": "",
