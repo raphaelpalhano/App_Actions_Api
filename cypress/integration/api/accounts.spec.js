@@ -13,7 +13,7 @@ describe('create account barriga', () =>{
     let randomName
 
     before('Generate token', () => {
-        cy.getToken(user.user1, 'signin').then(tk => {
+        cy.getToken('signin').then(tk => {
             token = tk
         })
         randomName = faker.name.findName();

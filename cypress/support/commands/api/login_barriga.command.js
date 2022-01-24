@@ -1,14 +1,15 @@
 /// <reference types="cypress" />
 
 
-Cypress.Commands.add('login_request', (user,endPoint) =>{
-    Cypress.env('host', 'https://barrigarest.wcaquino.me/')
+
+Cypress.Commands.add('login_request', (endPoint,username = Cypress.env('email'), password = Cypress.env('password')) =>{
+
     cy.request({
         method: 'POST',
-        url: `${Cypress.env('host')}${endPoint}`,
+        url: `${Cypress.env('baseUrlApi')}${endPoint}`,
         body: {
-            email: user.email, 
-            senha: user.password,
+            email: username, 
+            senha: password,
             redirecionar: false
         }
 
@@ -16,14 +17,15 @@ Cypress.Commands.add('login_request', (user,endPoint) =>{
 
 })
 
-Cypress.Commands.add('getToken', (user,endPoint) =>{
-    Cypress.env('host', 'https://barrigarest.wcaquino.me/')
+
+
+Cypress.Commands.add('getToken',(endPoint, username = Cypress.env('email'), password = Cypress.env('password')) =>{
     cy.request({
         method: 'POST',
-        url: `${Cypress.env('host')}${endPoint}`,
+        url: `${Cypress.env('baseUrlApi')}${endPoint}`,
         body: {
-            email: user.email, 
-            senha: user.password,
+            email: username, 
+            senha: password,
             redirecionar: false
         }
 
@@ -33,22 +35,20 @@ Cypress.Commands.add('getToken', (user,endPoint) =>{
 
 })
 
-Cypress.Commands.add('login_request_fail', (user,endPoint) =>{
+Cypress.Commands.add('login_request_fail', (endPoint,username = Cypress.env('email'), password = Cypress.env('password')) =>{
     
     cy.request({
         method: 'POST',
-        url: `https://barrigarest.wcaquino.me/${endPoint}`,
+        url: `${Cypress.env('baseUrlApi')}${endPoint}`,
         failOnStatusCode: false,
         body: {
-            email: user.email, 
-            senha: user.password,
+            email: username, 
+            senha: password,
             redirecionar: false
         }
 
     })
 
-
-    
 
 
 })

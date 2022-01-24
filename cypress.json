@@ -1,7 +1,8 @@
 {
     "env":{
         "baseUrl": "https://barrigareact.wcaquino.me/",
-        "experimentalSessionSupport": true
+        "baseUrlApi": "https://barrigarest.wcaquino.me/",
+        "experimentalSessionSupport": true 
     }
    
 }
