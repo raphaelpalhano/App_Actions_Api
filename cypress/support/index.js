@@ -14,8 +14,12 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands/login_barriga.command.js'
-import './commands/accounts.commands.js'
+// API
+import './commands/api/login_barriga.command.js'
+import './commands/api/accounts.commands.js'
 import './commands/configuration.commands.js'
+
+// Graphic Interface 
+import './commands/interface/login.commands.js'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
