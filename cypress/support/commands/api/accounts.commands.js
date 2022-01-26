@@ -1,14 +1,9 @@
 /// <reference types="cypress" />
 
-Cypress.Commands.add('create_account', (name_account, token, endpoint) =>{
+Cypress.Commands.add('create_account', (name_account, endpoint) =>{
         cy.request({
             method: 'POST', 
-            url: `${Cypress.env('baseUrlApi')}${endpoint}`,
-            headers: {
-                Accept: 'application/json, text/plain, */*',
-                Accept_Encoding: 'gzip, deflate, br',
-                Authorization: `JWT ${token}`
-            },
+            url: `${endpoint}`,
             body: {
                 nome: name_account
             }

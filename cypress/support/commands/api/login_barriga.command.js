@@ -6,7 +6,7 @@ Cypress.Commands.add('login_request', (endPoint,username = Cypress.env('email'),
 
     cy.request({
         method: 'POST',
-        url: `${Cypress.env('baseUrlApi')}${endPoint}`,
+        url: `${endPoint}`,
         body: {
             email: username, 
             senha: password,
@@ -22,7 +22,7 @@ Cypress.Commands.add('login_request', (endPoint,username = Cypress.env('email'),
 Cypress.Commands.add('getToken',(endPoint, username = Cypress.env('email'), password = Cypress.env('password')) =>{
     cy.request({
         method: 'POST',
-        url: `${Cypress.env('baseUrlApi')}${endPoint}`,
+        url: `${endPoint}`,
         body: {
             email: username, 
             senha: password,
@@ -30,6 +30,7 @@ Cypress.Commands.add('getToken',(endPoint, username = Cypress.env('email'), pass
         }
 
     }).its('body.token').should('not.be.empty').then(token => {
+        Cypress.env('token', token)
         return token
     })
 
@@ -39,7 +40,7 @@ Cypress.Commands.add('login_request_fail', (endPoint,username = Cypress.env('ema
     
     cy.request({
         method: 'POST',
-        url: `${Cypress.env('baseUrlApi')}${endPoint}`,
+        url: `${endPoint}`,
         failOnStatusCode: false,
         body: {
             email: username, 

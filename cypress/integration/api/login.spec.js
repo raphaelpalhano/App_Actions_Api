@@ -7,7 +7,7 @@ import * as user from '../../fixtures/users.json'
 describe('Acessing BarrigaReact', () =>{
     
 
-    const endpoint = 'signin'
+    const endpoint = `${Cypress.env('urlAPI')}signin`
 
 
     it('Validated Status code', () => {

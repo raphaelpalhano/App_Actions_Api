@@ -1,11 +1,16 @@
 /// <reference types="cypress" />
 
+import writter from '../../support/locators/writter.js'
+
+
 describe('Feature login page', () => {
 
-    beforeEach(() => {
-        cy.visit(Cypress.env('baseUrl'))
+  
+    before(() => {
+        cy.visit('/')
         cy.login()
     })
+    
 
     it('Sign in barrigareact', () => {
         cy.on('window:alert', msg => {

@@ -17,9 +17,13 @@
 // API
 import './commands/api/login_barriga.command.js'
 import './commands/api/accounts.commands.js'
-import './commands/configuration.commands.js'
 
 // Graphic Interface 
 import './commands/interface/login.commands.js'
+
+// helpers
+import './commands/helpers/request.commands.js'
+import "cypress-localstorage-commands"
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
