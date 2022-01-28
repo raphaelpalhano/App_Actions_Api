@@ -12,7 +12,7 @@
     "cytestAPI": "cypress run"  
   },
 ~~~
-3. npm i faker
+3. npm i faker@5.5.3
 
 4. execute test api: npm run cytestAPI
 

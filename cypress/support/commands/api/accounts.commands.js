@@ -10,3 +10,11 @@ Cypress.Commands.add('create_account', (name_account, endpoint) =>{
 
         })
 })
+
+Cypress.Commands.add('get_accounts', (endpoint) =>{
+    cy.request({
+        method: 'GET', 
+        url: `${endpoint}`,
+
+    })
+})
