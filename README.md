@@ -1,4 +1,4 @@
-# APP ACTIONS IN CYPRESS
+# APP ACTIONS IN CYPRESS WITH CI
 
 
 ## Requeriments
@@ -23,4 +23,5 @@
 
 ### Integration/Api
 
+### Continuos Integration
 
