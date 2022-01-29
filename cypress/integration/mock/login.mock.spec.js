@@ -4,7 +4,7 @@
 describe('Feature login page', () => {
 
     before(() => {
-        cy.intercept()
+       
         cy.login()
     })
     

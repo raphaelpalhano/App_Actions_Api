@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "cytestUI": "cypress open",
-    "cytestAPI": "cypress run"
+    "cytestAPI": "cypress run",
+    "chrometest": "npx cypress run -b chrome",
+    "electrontest": "npx cypress run -b electron",
+    "edgetest": "npx cypress run -b edge",
+    "dashboardtest": "npx cypress run --record --key 60d8bcc4-c2fa-404c-ba1f-45b2f017ed3b"
   },
   "keywords": [],
   "author": "",
