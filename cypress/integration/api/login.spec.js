@@ -19,7 +19,7 @@ describe('Acessing BarrigaReact', () =>{
 
     it('Valide Token generate', () => {
         cy.login_request(endpoint).then(response => {
-            cy.wrap(response).its('body.token').should('contains', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9')
+            cy.wrap(response).its('body.token').should('contains', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ')
         })
     })
    
