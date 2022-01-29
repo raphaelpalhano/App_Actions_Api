@@ -1,10 +1,6 @@
 name: Cypress App Actions integration
 
-on:
-  push:
-    branches:
-    - master
-    - test_feature
+on: [push]
 
 jobs:
 
@@ -25,7 +21,7 @@ jobs:
           wait-on-timeout: 120
           browser: chrome
           record: true
-          group: 'UI - Chrome'
+          group: 'API - Chrome'
           spec: cypress/integration/*
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
