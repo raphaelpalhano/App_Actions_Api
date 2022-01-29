@@ -23,8 +23,8 @@ jobs:
           record: true
           group: 'API - Chrome'
           spec: cypress/integration/api
-          spec: cypress/integration/interface
-          spec: cypress/integration/mock
+          spec1: cypress/integration/interface
+          spec2: cypress/integration/mock
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
