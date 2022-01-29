@@ -1,10 +1,6 @@
 name: Cypress App Actions integration
 
-on:
-  push:
-    branches:
-    - master
-    - test_feature
+on: [push]
 
 jobs:
 
