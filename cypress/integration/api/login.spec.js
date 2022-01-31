@@ -4,7 +4,7 @@ import * as user from '../../fixtures/users.json'
 
 
 
-describe('Acessing BarrigaReact', () =>{
+describe('API: Acessing BarrigaReact', () =>{
     
 
     const endpoint = `${Cypress.env('urlAPI')}signin`

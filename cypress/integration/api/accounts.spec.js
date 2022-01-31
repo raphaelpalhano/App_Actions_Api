@@ -1,7 +1,7 @@
 ///// <reference types="cypress" />
 import accountFactory from '../../modules/factories/accountFactory.js'
 
-describe("create account barriga", () => {
+describe("API: create account barriga", () => {
   const endpoint = `${Cypress.env("urlAPI")}contas`;
 
 

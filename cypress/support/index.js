@@ -15,15 +15,20 @@
 
 // Import commands.js using ES2015 syntax:
 // API
-import './commands/api/login_barriga.command.js'
-import './commands/api/accounts.commands.js'
+import './commands/api/login.api.js'
+import './commands/api/account.api.js'
 
 // Graphic Interface 
-import './commands/interface/login.commands.js'
+import './commands/interface/login.interface.js'
+
+// Mock Interface
+import './commands/mock/login.mock.js'
+
+
 
 // helpers
-import './commands/helpers/request.commands.js'
-import "cypress-localstorage-commands"
+import './commands/helpers/request.helper.js'
+
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
