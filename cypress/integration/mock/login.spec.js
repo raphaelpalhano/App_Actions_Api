@@ -4,7 +4,7 @@ import * as user from '../../fixtures/users.json'
 describe('MOCK: Feature login page', () => {
 
 
-    it('Login Invalids', () => {
+    it('Login Invalid', () => {
         cy.intercept_login('datasRandom.json')
     })
    
